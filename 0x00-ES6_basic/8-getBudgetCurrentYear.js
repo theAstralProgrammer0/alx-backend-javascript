@@ -1,9 +1,12 @@
-export default function getBudgetObject(income, gdp, capita) {
-  const budget = {
-    income,
-    gdp,
-    capita,
-  };
+function getCurrentYear() {
+  const date = new Date();
+  return date.getFullYear();
+}
 
-  return budget;
+export default function getBudgetForCurrentYear(income, gdp, capita) {
+  return {
+    [`income-${getCurrentYear()}`]: income,
+    [`gdp-${getCurrentYear()}`]: gdp,
+    [`capita-${getCurrentYear()}`]: capita,
+  };
 }
