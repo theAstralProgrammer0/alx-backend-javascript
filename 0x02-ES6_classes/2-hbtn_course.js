@@ -13,7 +13,7 @@ class HolbertonCourse {
     if (typeof name === 'string') {
       this._name = name;
     } else {
-      throw new Error('Name must be a string');
+      throw new TypeError('Name must be a string');
     }
   }
 
@@ -25,7 +25,7 @@ class HolbertonCourse {
     if (typeof length === 'number') {
       this._length = length;
     } else {
-      throw new Error('Length must be a number');
+      throw new TypeError('Length must be a number');
     }
   }
 
