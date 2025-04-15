@@ -138,3 +138,36 @@ ty@theAstralProgrammer0:~$ npm run dev 3-main.js
 41
 ty@theAstralProgrammer0:~$
 ```
+
+## 4. Rest parameter syntax for functions
+
+Modify the following function to return the number of arguments passed to it using the rest parameter syntax
+
+```javascript
+export default function returnHowManyArguments() {
+
+}
+```
+
+Example:
+
+```
+> returnHowManyArguments("Hello", "ALX", 2020);
+3
+>
+```
+
+Execution:
+
+```terminal
+ty@theAstralProgrammer0:~$ cat 4-main.js
+import returnHowManyArguments from './4-rest-parameter.js';
+
+console.log(returnHowManyArguments("one"));
+console.log(returnHowManyArguments("one", "two", 3, "4th"));
+ty@theAstralProgrammer0:~$
+ty@theAstralProgrammer0:~$ npm run dev 4-main.js
+1
+4
+ty@theAstralProgrammer0:~$
+```
