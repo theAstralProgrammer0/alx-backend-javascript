@@ -6,6 +6,5 @@ export default async function asyncUploadUser() {
 
   return Promise.all([photo, user])
     .then((values) => ({ photo: values[0], user: values[1] }))
-    .catch((err) =>  ({ photo: null, user: null }));
+    .catch(() => ({ photo: null, user: null }));
 }
-
